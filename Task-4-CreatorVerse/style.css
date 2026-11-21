@@ -1,0 +1,248 @@
+/* 1. Box Model Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #100d20;
+    color: #ffffff;
+    padding: 25px 15px;
+    min-height: 100vh;
+}
+
+/* 2. Main Container */
+.component-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background: #1c1731;
+    padding: 25px;
+    border: 1px solid #40345f;
+    border-radius: 22px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.brand {
+    color: #ff9d5c;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* 3. Mobile Profile Layout */
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 22px;
+}
+
+.avatar-section {
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ff9d5c;
+    padding: 4px;
+    transition: transform 0.25s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+}
+
+.profile-details {
+    width: 100%;
+}
+
+.username {
+    color: #ffb77e;
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.creator-name {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.role {
+    color: #b7a9d6;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.bio {
+    color: #d2cbe3;
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.portfolio {
+    color: #ffad72;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.portfolio:hover {
+    text-decoration: underline;
+}
+
+/* 4. Profile Buttons */
+.profile-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.profile-actions button {
+    flex: 1;
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.follow-btn {
+    background: #ff9d5c;
+    color: #21152b;
+}
+
+.message-btn {
+    background: #35294e;
+    color: white;
+    border: 1px solid #74618e !important;
+}
+
+.follow-btn:active,
+.message-btn:active {
+    transform: scale(0.96);
+}
+
+/* 5. Statistics Grid */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.stat {
+    background: #29213f;
+    border: 1px solid #44365f;
+    border-radius: 13px;
+    padding: 18px 5px;
+    text-align: center;
+}
+
+.stat h3 {
+    color: #ffad72;
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.stat p {
+    color: #c4b9d9;
+    font-size: 12px;
+}
+
+/* 6. Story Highlights */
+.highlights-section {
+    margin-top: 35px;
+    padding-top: 23px;
+    border-top: 1px solid #40345f;
+}
+
+.highlights-section h3 {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.highlights {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 12px;
+}
+
+.highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    color: #ddd4ee;
+    font-size: 13px;
+}
+
+.highlight-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff9d5c, #a76aff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    border: 3px solid #55436f;
+}
+
+.highlight-circle:hover {
+    transform: scale(1.05);
+}
+
+/* 7. Desktop Layout */
+@media (min-width: 768px) {
+    .component-container {
+        padding: 40px;
+    }
+
+    .profile-header {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: 35px;
+    }
+
+    .avatar {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile-details {
+        flex: 1;
+    }
+
+    .profile-actions {
+        max-width: 300px;
+    }
+
+    .stats {
+        margin-top: 30px;
+    }
+
+    .stat {
+        padding: 22px;
+    }
+
+    .stat h3 {
+        font-size: 25px;
+    }
+
+    .stat p {
+        font-size: 14px;
+    }
+}
