@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA Smartwatch | Product Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="component-container">
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">NOVA.</div>
+        <button class="theme-btn" id="themeBtn">☀ Change Theme</button>
+    </header>
+
+    <!-- Product Showcase -->
+    <section class="product-card">
+
+        <!-- Image Section -->
+        <div class="image-section">
+            <span class="badge">BEST SELLER</span>
+            <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800"
+                alt="Premium smartwatch">
+        </div>
+
+        <!-- Details Section -->
+        <div class="details-section">
+            <div>
+                <p class="category">NOVA COLLECTION / 2026</p>
+                <h1 class="product-title">NOVA Smartwatch Pro</h1>
+                <p class="rating">★★★★★ 4.9 / 5 (248 Reviews)</p>
+            </div>
+
+            <p class="description">
+                Experience the perfect combination of technology
+                and style. Track your fitness, monitor your health
+                and stay connected with the NOVA Smartwatch Pro.
+            </p>
+
+            <!-- Features -->
+            <div class="features">
+                <span class="feature">AMOLED Display</span>
+                <span class="feature">Heart Rate Monitor</span>
+                <span class="feature">Water Resistant</span>
+                <span class="feature">7-Day Battery</span>
+            </div>
+
+            <!-- Colour Selection -->
+            <div>
+                <p class="color-heading">Available Colours</p>
+                <div class="color-options">
+                    <button class="color black" aria-label="Black"></button>
+                    <button class="color silver" aria-label="Silver"></button>
+                    <button class="color green" aria-label="Green"></button>
+                </div>
+            </div>
+
+            <!-- Price -->
+            <div class="price-section">
+                <span class="price">₹4,999</span>
+                <span class="old-price">₹6,999</span>
+                <p class="description">Inclusive of all taxes</p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button class="cart-btn" id="addCart">ADD TO CART +</button>
+                <button class="buy-btn" id="buyNow">BUY NOW →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <section class="cart-summary" id="cartSummary" hidden>
+        <h3>YOUR SHOPPING CART</h3>
+        <p>NOVA Smartwatch Pro</p>
+        <p>Quantity: <span id="quantity">0</span></p>
+        <p>Total: ₹<span id="total">0</span></p>
+        <button id="removeCart">Remove Item</button>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

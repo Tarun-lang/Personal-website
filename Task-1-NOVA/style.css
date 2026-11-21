@@ -1,0 +1,269 @@
+/* 1. Box Model Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e9edf2;
+    color: #ffffff;
+    padding: 25px 15px;
+    transition: 0.3s;
+}
+
+/* 2. Mobile Base Styles */
+.component-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #182333;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.theme-btn {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #182333;
+    color: white;
+}
+
+/* Main Product Card */
+.product-card {
+    background: #182333;
+    border-radius: 20px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Product Image */
+.image-section {
+    background: linear-gradient(145deg, #303d4d, #111a27);
+    border-radius: 16px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 350px;
+    height: 280px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1.08);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #c5f36b;
+    color: #182333;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* Product Information */
+.details-section {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.category {
+    color: #c5f36b;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.product-title {
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+.rating {
+    color: #ffd166;
+    font-size: 14px;
+}
+
+.description {
+    color: #bac4d0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Features */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.feature {
+    background: #29384a;
+    color: #e3eaf2;
+    padding: 9px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+/* Colour Options */
+.color-heading {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.color-options {
+    display: flex;
+    gap: 12px;
+}
+
+.color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.black { background: #111111; }
+.silver { background: #bfc5cc; }
+.green { background: #718b6b; }
+
+/* Price */
+.price-section {
+    border-top: 1px solid #394657;
+    padding-top: 18px;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: bold;
+    color: #c5f36b;
+}
+
+.old-price {
+    color: #9ba7b5;
+    text-decoration: line-through;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.buttons button {
+    padding: 14px;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.25s;
+}
+
+.cart-btn {
+    background: #c5f36b;
+    color: #182333;
+}
+
+.buy-btn {
+    background: transparent;
+    border: 1px solid #c5f36b !important;
+    color: white;
+}
+
+.buttons button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.buttons button:active {
+    transform: scale(0.96);
+}
+
+/* Cart Summary */
+.cart-summary {
+    background: white;
+    color: #182333;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 12px;
+    line-height: 1.8;
+}
+
+.cart-summary h3 {
+    margin-bottom: 8px;
+}
+
+.cart-summary button {
+    padding: 7px 12px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+/* 3. Desktop Media Query */
+@media (min-width: 768px) {
+    .product-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 35px;
+        padding: 35px;
+    }
+
+    .image-section img {
+        height: 420px;
+    }
+
+    .product-title {
+        font-size: 36px;
+    }
+
+    .buttons {
+        flex-direction: row;
+    }
+
+    .buttons button {
+        flex: 1;
+    }
+}
+
+/* Dark Theme for Page */
+body.dark-page {
+    background: #0b111b;
+}
+
+body.dark-page .navbar {
+    color: white;
+}
